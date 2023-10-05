@@ -1,8 +1,8 @@
-<h1> Blogs </h1> 
-<ul> 
-    <% @blog_pages.each do |blog_page| %>
+<h1>All Blog Pages</h1>
+<ul>
+  <% @blog_pages.each do |blog_page| %>
     <li>
-    <%= link_to blog_page.title, blog_pages_path(blog_page) %> 
+      <%= link_to blog_page.title, blog_page_path(blog_page) %>
     </li>
-    <% end %>
+  <% end %>
 </ul>
