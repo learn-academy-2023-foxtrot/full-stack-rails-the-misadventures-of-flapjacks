@@ -1,0 +1,19 @@
+<h1> Add a new blog page </h1>
+<%= form_with model: @blog_page, url: blog_pages_path, method: :post do |form| %>
+<div class="field"> 
+<%= form.label :title %>
+<%= form.text_field :title %>
+</div>
+
+<div class="area"> 
+<%= form.label :content %>
+<%= form.text_area :content %>
+</div>
+
+<div class="actions"> 
+<%= form.submit "Create blog page" %>
+</div>
+
+<% end %>
+
+<%= link_to "Back to main menu", blog_pages_path %>
